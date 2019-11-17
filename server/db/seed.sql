@@ -7,7 +7,7 @@ CREATE DATABASE marine_db;
 CREATE TABLE researchers (
     id SERIAL PRIMARY KEY,
     name VARCHAR UNIQUE NOT NULL, 
-    job_title VARCHAR NOT NULL
+    job_title VARCHAR 
 );
 
 CREATE TABLE species (
@@ -19,7 +19,7 @@ CREATE TABLE species (
 CREATE TABLE animals (
     id SERIAL PRIMARY KEY,
     species_id INT REFERENCES species (id), 
-    nickname VARCHAR
+    nickname VARCHAR UNIQUE NOT NULL
 );
 
 CREATE TABLE habitats (
